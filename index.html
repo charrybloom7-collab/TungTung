@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tung Tung Tung: Meaning, Origin, and Internet Culture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#181022;
+    --ink-deep:#100b17;
+    --paper:#faf7fb;
+    --paper-alt:#f1ebf5;
+    --line:#e6dfeb;
+    --text:#2c2436;
+    --muted:#6b6277;
+    --white:#ffffff;
+    --pink:#ff2e88;
+    --pink-deep:#d61e6f;
+    --purple:#7c3aed;
+    --yellow:#ffd23f;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    width:100%;
+    background:var(--paper);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    line-height:1.68;
+  }
+  h1,h2,h3{
+    font-family:'Fredoka', sans-serif;
+    color:var(--ink);
+    margin:0 0 .5em 0;
+    line-height:1.2;
+    font-weight:600;
+  }
+  p{margin:0 0 1.1em 0; max-width:70ch; color:var(--text);}
+  a{color:var(--pink-deep);}
+
+  /* ---------- HEADER ---------- */
+  header.site-header{
+    width:100%;
+    background:var(--ink);
+    padding:16px 6vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Fredoka', sans-serif;
+    font-size:1.3rem;
+    font-weight:700;
+    color:var(--white);
+    white-space:nowrap;
+  }
+  .brand-emoji{font-size:1.4rem; line-height:1;}
+  .brand .dim{color:var(--yellow);}
+  nav.site-nav{display:flex; gap:24px; flex-wrap:wrap;}
+  nav.site-nav a{
+    color:#cfc7da;
+    text-decoration:none;
+    font-size:.92rem;
+    font-weight:600;
+    transition:color .2s ease;
+  }
+  nav.site-nav a:hover{color:var(--pink);}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    width:100%;
+    background:linear-gradient(90deg, var(--pink), var(--purple));
+    overflow:hidden;
+    padding:9px 0;
+    white-space:nowrap;
+  }
+  .marquee-track{
+    display:inline-block;
+    animation:scroll-left 16s linear infinite;
+    font-family:'Fredoka', sans-serif;
+    font-weight:600;
+    color:var(--white);
+    font-size:.95rem;
+    letter-spacing:.03em;
+  }
+  .marquee-track span{margin:0 22px;}
+  @keyframes scroll-left{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    width:100%;
+    background:radial-gradient(900px 420px at 80% -20%, #ffd23f22, transparent), linear-gradient(160deg, var(--ink) 0%, var(--ink-deep) 75%);
+    padding:70px 6vw 64px;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero-badge{
+    display:inline-block;
+    background:#2a2038;
+    color:var(--yellow);
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:16px;
+  }
+  .hero h1{color:var(--white); font-size:clamp(2rem, 3.6vw, 2.9rem); max-width:17ch;}
+  .hero p.lead{color:#cfc7da; font-size:1.12rem; max-width:58ch; margin-top:16px;}
+  .hero p.lead a{color:var(--yellow); font-weight:700;}
+  .hero-emoji-card{
+    background:var(--white);
+    border-radius:16px;
+    padding:34px 20px;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+  }
+  .hero-emoji-card .big-emoji{font-size:3.2rem; display:block; margin-bottom:12px;}
+  .hero-emoji-card .caption{
+    font-family:'Fredoka', sans-serif;
+    color:var(--ink);
+    font-size:1.1rem;
+    font-weight:600;
+  }
+  .hero-emoji-card .sub{color:var(--muted); font-size:.9rem; margin-top:6px;}
+  @media (max-width:820px){.hero{grid-template-columns:1fr;}}
+
+  /* ---------- BODY / SECTIONS ---------- */
+  main{width:100%;}
+  section{
+    width:100%;
+    padding:56px 6vw;
+    border-bottom:1px solid var(--line);
+  }
+  section.alt{background:var(--paper-alt);}
+  section.dark{background:var(--ink); border-bottom:none;}
+  .section-inner{max-width:1180px; margin:0 auto;}
+  .section-head{
+    display:flex;
+    gap:26px;
+    align-items:baseline;
+    margin-bottom:24px;
+    flex-wrap:wrap;
+  }
+  .section-num{
+    font-family:'Fredoka', sans-serif;
+    font-size:.78rem;
+    color:var(--pink-deep);
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    background:#ffe0ee;
+    padding:5px 12px;
+    border-radius:999px;
+  }
+  section.dark .section-num{background:#2a2038; color:var(--yellow);}
+  section h2{font-size:1.7rem;}
+  section.dark h2{color:var(--white);}
+  section.dark p{color:#cfc7da;}
+
+  .grid-two{display:grid; grid-template-columns:1fr 1fr; gap:44px;}
+  @media (max-width:820px){.grid-two{grid-template-columns:1fr;}}
+
+  .pill-grid{display:flex; flex-wrap:wrap; gap:10px;}
+  .pill{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:9px 18px;
+    font-size:.92rem;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .pill::before{content:"🎵 "; }
+
+  table.usage-table{width:100%; border-collapse:collapse; margin-top:8px; background:var(--white); border-radius:10px; overflow:hidden;}
+  table.usage-table th, table.usage-table td{
+    text-align:left; padding:14px 18px; border-bottom:1px solid var(--line); font-size:.95rem;
+  }
+  table.usage-table th{
+    font-family:'Fredoka', sans-serif; color:var(--ink); background:var(--paper-alt);
+  }
+
+  .callout{
+    border-left:4px solid var(--pink);
+    background:var(--white);
+    padding:18px 22px;
+    border-radius:0 10px 10px 0;
+    margin:24px 0;
+    max-width:70ch;
+    box-shadow:0 4px 14px rgba(44,36,54,.06);
+  }
+  .callout p{margin:0;}
+  .callout a{color:var(--pink-deep); font-weight:700;}
+
+  .step-flow{list-style:none; margin:0; padding:0; counter-reset:s;}
+  .step-flow li{
+    counter-increment:s;
+    display:flex; gap:16px;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .step-flow li:last-child{border-bottom:none;}
+  .step-flow li::before{
+    content:counter(s);
+    font-family:'Fredoka', sans-serif;
+    font-weight:700;
+    color:var(--white);
+    background:var(--purple);
+    min-width:28px; height:28px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    font-size:.85rem;
+  }
+
+  .faq-item{padding:20px 0; border-bottom:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-item h3{font-family:'Inter',sans-serif; font-size:1.02rem; font-weight:700; margin-bottom:6px; color:var(--ink);}
+  .faq-item p{margin:0; color:var(--muted);}
+
+  .cta-band{
+    background:linear-gradient(120deg, var(--pink), var(--purple));
+    padding:52px 6vw;
+  }
+  .cta-band .section-inner{
+    max-width:1180px; margin:0 auto;
+    display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .cta-band h2{font-size:1.55rem; margin:0; color:var(--white);}
+  .cta-band p{color:#ffe0ee; margin:6px 0 0 0;}
+
+  /* ---------- FOOTER ---------- */
+  footer.site-footer{width:100%; background:var(--ink-deep); padding:50px 6vw 28px;}
+  .footer-inner{
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px;
+  }
+  @media (max-width:760px){.footer-inner{grid-template-columns:1fr;}}
+  footer.site-footer h4{
+    color:var(--white); font-family:'Fredoka', sans-serif;
+    font-size:.82rem; letter-spacing:.04em; text-transform:uppercase; margin:0 0 14px 0;
+  }
+  footer.site-footer p{color:#a79cb3; font-size:.95rem;}
+  footer.site-footer ul{list-style:none; margin:0; padding:0;}
+  footer.site-footer ul li{margin-bottom:8px;}
+  footer.site-footer ul li a{color:#a79cb3; text-decoration:none; font-size:.95rem;}
+  footer.site-footer ul li a:hover{color:var(--pink);}
+
+  .social-row{display:flex; gap:14px; margin-top:8px;}
+  .social-row a{
+    width:38px; height:38px; border:1px solid #322842; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; color:#a79cb3;
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .social-row a:hover{background:var(--pink); border-color:var(--pink); color:var(--white);}
+  .social-row svg{width:17px; height:17px; fill:currentColor;}
+
+  .footer-bottom{
+    max-width:1180px; margin:36px auto 0; padding-top:20px; border-top:1px solid #2a2038;
+    font-size:.85rem; color:#6f6480;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-emoji">🥁</span>
+    Tung<span class="dim">Culture</span>
+  </div>
+  <nav class="site-nav">
+    <a href="#meaning">Meaning</a>
+    <a href="#meme-culture">Meme Culture</a>
+    <a href="#research">How to Research</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>TUNG TUNG TUNG 🥁</span><span>MEANING · ORIGIN · MEMES</span><span>TUNG TUNG TUNG 🥁</span><span>MEANING · ORIGIN · MEMES</span>
+    <span>TUNG TUNG TUNG 🥁</span><span>MEANING · ORIGIN · MEMES</span><span>TUNG TUNG TUNG 🥁</span><span>MEANING · ORIGIN · MEMES</span>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div>
+      <span class="hero-badge">Internet Culture Explainer</span>
+      <h1>Tung Tung Tung: Meaning, Origin, and Internet Culture</h1>
+      <p class="lead">
+        Repeated syllables, playful pronunciation, and a mysterious feeling have helped phrases like
+        <a href="https://tungtungsahur.org/" target="_blank" rel="noopener">tung tung tung</a>
+        become memorable parts of internet culture — but unlike a dictionary word, its meaning depends entirely on where you first heard it.
+      </p>
+    </div>
+    <div class="hero-emoji-card">
+      <span class="big-emoji">🥁🥁🥁</span>
+      <div class="caption">Tung. Tung. Tung.</div>
+      <div class="sub">Same sound, different meaning everywhere.</div>
+    </div>
+  </section>
+
+  <section id="meaning">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Meaning</span>
+        <h2>What does "Tung Tung Tung" mean?</h2>
+      </div>
+      <div class="grid-two">
+        <div>
+          <p>The meaning of "Tung Tung Tung" depends heavily on its context. The repeated sound may be used as an imitation of a beat, a sound effect, a humorous expression, a character name, or part of an internet meme. In some online contexts, people use the phrase simply because it sounds funny or memorable.</p>
+        </div>
+        <div>
+          <p>This is common in digital culture — a phrase doesn't always need a traditional linguistic definition to become popular. Sometimes its sound, visual association, or connection to a piece of content is enough. Anyone researching the term should pay close attention to the specific video, image, character, or post where they encountered it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Rhythm</span>
+        <h2>Why repeated words become memorable</h2>
+      </div>
+      <p>Repetition is one of the simplest ways to make an expression stand out. "Tung Tung Tung" contains the same basic sound three times, creating a rhythm that's easy to remember — similar repetition appears in music, children's expressions, sound effects, advertising, and online humor.</p>
+      <div class="pill-grid">
+        <span class="pill">Easy to pronounce</span>
+        <span class="pill">Easy to remember</span>
+        <span class="pill">Noticeable in short videos</span>
+        <span class="pill">Suitable for humorous captions</span>
+        <span class="pill">Simple to repeat in conversations</span>
+        <span class="pill">Recognizable as a meme</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="meme-culture">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Meme culture</span>
+        <h2>Tung Tung Tung and internet meme culture</h2>
+      </div>
+      <div class="grid-two">
+        <div>
+          <p>Internet memes often develop through repetition and adaptation. A person may encounter an original clip and then see other users change the caption, sound, image, character, or situation — eventually, the original context may become less important than the recognizable phrase itself.</p>
+        </div>
+        <div>
+          <p>"Tung Tung Tung" fits naturally into this kind of digital communication because its rhythmic structure suits short-form content, and tracing its spread is a good case study in
+          <a href="https://tungtungsahur.org/" target="_blank" rel="noopener">how a meme phrase travels across communities</a>.
+          One community might treat it as a joke, while another associates it with a specific fictional concept or viral clip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Context</span>
+        <h2>How context changes the meaning</h2>
+      </div>
+      <p>A major challenge with internet terminology is that context matters. Imagine seeing the phrase by itself in a comment — it may not be possible to determine exactly what the writer means. The same expression could have a different interpretation when attached to a video, character, song, or meme. This is why searches for unusual internet phrases often produce several interpretations.</p>
+      <div class="callout">
+        <p>Instead of assuming the first explanation is universally correct, it's better to ask: where did the phrase appear, and what was happening around it? The surrounding content usually provides the information needed to understand the intended meaning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Sound</span>
+        <h2>The role of sound in viral content</h2>
+      </div>
+      <p>Short-form platforms have changed the way people consume digital content — users often encounter a sound before they understand its original source. A memorable audio pattern can then spread through short videos → remixes → reaction clips → memes → comments → new variations. Once enough people recognize the sound, the phrase becomes a form of shared digital shorthand.</p>
+      <p>"Tung Tung Tung" demonstrates why sound can be just as important as written language in online communities — a phrase can become popular not because it contains a complicated idea, but because it creates an immediate auditory identity.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Search behavior</span>
+        <h2>Why people search for "Tung Tung Tung"</h2>
+      </div>
+      <p>Search behavior around unusual phrases can be surprisingly varied. Some people search for the phrase after seeing a viral video; others want to understand a character, discover the original source, learn pronunciation, or find related memes.</p>
+      <div class="pill-grid">
+        <span class="pill">Understanding the meaning</span>
+        <span class="pill">Finding the original source</span>
+        <span class="pill">Identifying a character or meme</span>
+        <span class="pill">Learning pronunciation</span>
+        <span class="pill">Discovering related videos</span>
+        <span class="pill">Understanding why it went viral</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Usage</span>
+        <h2>Different ways the phrase may be used</h2>
+      </div>
+      <table class="usage-table">
+        <thead><tr><th>Usage type</th><th>Possible purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Sound effect</td><td>Representing a repeated beat or noise</td></tr>
+          <tr><td>Meme expression</td><td>Creating humor or emphasizing a reaction</td></tr>
+          <tr><td>Character reference</td><td>Identifying a fictional or viral character</td></tr>
+          <tr><td>Caption</td><td>Adding rhythm or comedic timing</td></tr>
+          <tr><td>Short-video audio</td><td>Supporting a trend or recurring format</td></tr>
+          <tr><td>Community slang</td><td>Signaling familiarity with an online trend</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px;">The exact interpretation should always be based on the source and context rather than treating every appearance as identical.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Evolution</span>
+        <h2>How online trends transform simple expressions</h2>
+      </div>
+      <p>An internet trend rarely remains unchanged. A phrase can begin with one piece of content and then develop through thousands of user-created variations — some people preserve the original meaning, while others intentionally exaggerate or reinterpret it.</p>
+      <p>For example, a sound may initially be connected to a specific character. Later, users might use the sound in unrelated comedy videos. Eventually, people may recognize the phrase without knowing its original background — that transformation is one of the defining characteristics of internet culture.</p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Verification</span>
+        <h2>The importance of checking the original context</h2>
+      </div>
+      <p>When researching "Tung Tung Tung," users may encounter explanations that differ from one another. This isn't necessarily surprising — viral content can be reposted without its original description, while captions may change from one platform to another.</p>
+      <p>A reliable approach is to trace the phrase back to the earliest identifiable source available and compare it with later uses. This is particularly important when a meme has been translated, remixed, or combined with another trend.</p>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Method</span>
+        <h2>How to research unfamiliar internet terms</h2>
+      </div>
+      <p>If you discover an unusual phrase online, a few simple research habits can make its meaning easier to understand:</p>
+      <ol class="step-flow">
+        <li>Search the exact phrase in quotation marks.</li>
+        <li>Look for the earliest identifiable videos or posts.</li>
+        <li>Check how different communities use the expression.</li>
+        <li>Compare the phrase with related character or meme names.</li>
+        <li>Pay attention to accompanying images and sounds.</li>
+        <li>Avoid assuming a single repost explains the entire trend.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Digital life</span>
+        <h2>Tung Tung Tung in modern digital communication</h2>
+      </div>
+      <div class="grid-two">
+        <div>
+          <p>Digital communication is increasingly visual, audio-based, and highly compressed. People frequently communicate ideas through short clips, emojis, sounds, GIFs, and references rather than complete explanations. A repeated expression such as "Tung Tung Tung" works well within this environment because it communicates through recognition and rhythm.</p>
+        </div>
+        <div>
+          <p>Someone familiar with the trend may understand the reference immediately, while someone encountering it for the first time may find it completely mysterious — this difference between insiders and newcomers is common in online communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">Wrap-up</span>
+        <h2>Is Tung Tung Tung a traditional word?</h2>
+      </div>
+      <p>The phrase shouldn't automatically be treated as a conventional word with one universally accepted dictionary definition. Its interpretation can depend on the digital context in which it appears — it may function as a sound, meme phrase, character reference, or humorous expression.</p>
+      <p>This distinction is useful because internet culture constantly creates temporary expressions that behave more like cultural references than standard vocabulary. Rather than assuming the phrase has one permanent definition, it's more useful to understand the context in which it appears — a meme, video, fictional reference, sound effect, or community joke can give the same expression a particular meaning that may not apply elsewhere.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-num">FAQ</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is Tung Tung Tung?</h3>
+        <p>A repeated-sound phrase that can appear in internet memes, short-form videos, humorous content, and other online contexts. Its exact meaning depends on the specific trend or source where it's used.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is Tung Tung Tung repeated three times?</h3>
+        <p>The repetition creates rhythm and makes the phrase easy to remember. Repeated sounds are commonly used in humorous expressions, sound effects, memes, and digital content.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Tung Tung Tung a real word?</h3>
+        <p>Not necessarily in the conventional dictionary sense. Depending on its context, it may function as a sound expression, meme phrase, fictional reference, or piece of internet slang.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where did Tung Tung Tung originate?</h3>
+        <p>The origin can depend on the specific version of the trend being discussed. Online phrases are frequently copied and modified, so identifying the original source requires looking at the particular content associated with the phrase.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do people use Tung Tung Tung online?</h3>
+        <p>People may use it because of its humorous sound, rhythm, meme association, or connection to a recognizable online trend. Familiarity with the surrounding meme often provides more meaning than the words themselves.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can Tung Tung Tung have different meanings?</h3>
+        <p>Yes. Internet expressions can develop different interpretations as they move between communities and platforms, so context is important when determining what someone means by the phrase.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do unusual phrases become viral?</h3>
+        <p>Memorable sounds, humor, repetition, visual associations, and easy participation can all contribute to the spread of an online expression. Short-form platforms accelerate this by letting users reuse sounds and formats.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="section-inner">
+      <div>
+        <h2>Heard it. Now trace it.</h2>
+        <p>Context first, definitions second — that's how internet phrases actually make sense.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>TungCulture</h4>
+      <p>Breaking down internet phrases, meme trends, and viral sounds one origin story at a time.</p>
+      <div class="social-row">
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.5 2c.3 2.3 1.7 3.9 4 4.2v2.9c-1.4.1-2.8-.3-4-1.1v6.7c0 3.3-2.7 5.9-6 5.9S4.5 17 4.5 13.7c0-3.2 2.5-5.7 5.6-5.9v3.1c-1.4.2-2.6 1.4-2.6 2.8 0 1.6 1.3 2.9 3 2.9s3-1.3 3-2.9V2h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c2.7 0 3 .01 4.1.06 1.05.05 1.8.23 2.2.4.55.2.95.46 1.36.87.41.41.67.81.87 1.36.17.4.35 1.15.4 2.2.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.05-.23 1.8-.4 2.2-.2.55-.46.95-.87 1.36-.41.41-.81.67-1.36.87-.4.17-1.15.35-2.2.4-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.05-.05-1.8-.23-2.2-.4a3.9 3.9 0 01-1.36-.87 3.9 3.9 0 01-.87-1.36c-.17-.4-.35-1.15-.4-2.2C2.21 15 2.2 14.7 2.2 12s.01-3 .06-4.1c.05-1.05.23-1.8.4-2.2.2-.55.46-.95.87-1.36.41-.41.81-.67 1.36-.87.4-.17 1.15-.35 2.2-.4C8.1 2.21 8.4 2.2 11 2.2h1zm0 1.8c-2.66 0-2.97.01-4.02.06-.87.04-1.34.19-1.65.31-.42.16-.72.35-1.03.66-.31.31-.5.61-.66 1.03-.12.31-.27.78-.31 1.65C4.28 8.76 4.27 9.07 4.27 11.7v.6c0 2.63.01 2.94.06 3.99.04.87.19 1.34.31 1.65.16.42.35.72.66 1.03.31.31.61.5 1.03.66.31.12.78.27 1.65.31 1.05.05 1.36.06 4.02.06s2.97-.01 4.02-.06c.87-.04 1.34-.19 1.65-.31.42-.16.72-.35 1.03-.66.31-.31.5-.61.66-1.03.12-.31.27-.78.31-1.65.05-1.05.06-1.36.06-3.99v-.6c0-2.63-.01-2.94-.06-3.99-.04-.87-.19-1.34-.31-1.65a2.8 2.8 0 00-.66-1.03 2.8 2.8 0 00-1.03-.66c-.31-.12-.78-.27-1.65-.31C14.97 4.01 14.66 4 12 4zm0 3.4a4.6 4.6 0 110 9.2 4.6 4.6 0 010-9.2zm0 1.8a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zm5.85-2a1.08 1.08 0 110 2.16 1.08 1.08 0 010-2.16z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22 12s0-3.2-.4-4.7c-.24-.86-.9-1.53-1.76-1.77C18.3 5.1 12 5.1 12 5.1s-6.3 0-7.84.43c-.86.24-1.52.9-1.76 1.77C2 8.8 2 12 2 12s0 3.2.4 4.7c.24.86.9 1.53 1.76 1.77 1.54.43 7.84.43 7.84.43s6.3 0 7.84-.43c.86-.24 1.52-.9 1.76-1.77.4-1.5.4-4.7.4-4.7zM10 15.2V8.8L15.5 12 10 15.2z"/></svg></a>
+        <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M3 3h4.2l4.1 5.6L16 3h4l-6.4 8.2L20.5 21h-4.2l-4.5-6.1L6.7 21H3l6.8-8.7L3 3z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#meaning">Meaning</a></li>
+        <li><a href="#meme-culture">Meme Culture</a></li>
+        <li><a href="#research">How to Research</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Topics</h4>
+      <ul>
+        <li><a href="#meaning">Viral Sounds</a></li>
+        <li><a href="#meme-culture">Origin Tracing</a></li>
+        <li><a href="#research">Meme Research Tips</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TungCulture. All rights reserved.</span>
+    <span>Internet Culture &amp; Meme Explainers</span>
+  </div>
+</footer>
+
+</body>
+</html>
+
